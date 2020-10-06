@@ -1,0 +1,19 @@
+.button {
+  background-color: #4056A1;
+  font-family: Bungee, sans-serif;
+  color: #FFFFFF;
+}
+
+.button + .counter {
+  font-family: Bungee, sans-serif;
+  float: right;
+}
+
+ #tweet-text {
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none; 
+  border-bottom: 3px solid black;
+
+
+ }
