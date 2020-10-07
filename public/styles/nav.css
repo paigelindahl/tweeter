@@ -9,6 +9,8 @@ nav {
   justify-content: space-between;
   display: flex;
   flex-direction: row;
+  position: fixed;
+  top: 0;
 }
 
 #logo-font {

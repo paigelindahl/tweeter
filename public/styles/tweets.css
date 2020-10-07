@@ -1,0 +1,53 @@
+.tweets-parent {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.tweet-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.name {
+  padding-left: 10px;
+}
+
+.handle {
+  visibility: hidden;
+  color: #a09b9b91;
+}
+
+.tweet-header div {
+  display: flex;
+}
+.tweets-parent:hover {
+  box-shadow: 10px 10px 5px gray;
+}
+
+.tweets-parent:hover .handle {
+  visibility: visible;
+}
+
+.tweets {
+  flex-basis: 100%;
+  border-bottom: 3px solid black;
+  padding-bottom: 20px;
+
+}
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-tweet {
+  font-size: 15px;
+}  

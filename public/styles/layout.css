@@ -19,10 +19,14 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 120px;
 }
  main {
    width: 90%;
    margin: auto;
+ }
+ p {
+   margin: 12px 0;
  }
 
 

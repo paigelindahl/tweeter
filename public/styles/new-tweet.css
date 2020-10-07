@@ -8,6 +8,9 @@
   font-family: Bungee, sans-serif;
   float: right;
 }
+.red {
+  color:red;
+}
 
  #tweet-text {
   background-color: #f4f1ec;

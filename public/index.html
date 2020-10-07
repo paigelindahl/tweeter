@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/tweets.css" type="text/css"/>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -28,7 +30,7 @@
       <div><strong>Write</strong> a new tweet</div>
     </nav>
 
-    <header>
+    <header id="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -51,6 +53,28 @@
           </div>
         </form>
       </section>
+      <section>
+        <article class="tweets-parent">
+          <header class="tweet-header">
+            <div>
+              <img src="https://i.imgur.com/73hZDYK.png"/>
+              <p class="name">Newton</p>
+            </div>
+            <p class="handle">@SirIsaac</p>
+          </header>
+            <p class="tweets">Testing if this works</p>
+        <footer class="footer">
+          <p class="footer-tweet">10 days ago</p>
+          <div class="flags">
+            <span>&#9873</span>
+            <span>&#8633</span>
+            <span>&#10084</span>
+          </div>
+        </footer>
+        </article>
+      </section>
     </main>
   </body>
 </html>
+
+
