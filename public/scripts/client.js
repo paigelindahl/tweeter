@@ -4,17 +4,29 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
- $(document).ready(function () {
-  $("#tweet-form").on('submit', submitHandler)
-  
-  renderTweets(data);
- });
+
+$(document).ready(function () {
+  $('#tweet-form').on('submit', submitHandler);
+  const loadtweets = function() {
+   $.ajax('/tweets/', {method: 'GET'})
+   .then(function (res, err) {
+     renderTweets(res)
+   });
+  }
+  loadtweets();
+})
 
  const submitHandler = function (event) {
   event.preventDefault();
   const $form = $(this);
+  console.log('this is the form', $form);
+  const charLength = $('#tweet-text').val().length;
   const data = $form.serialize();
-  
+    if (charLength >= 140) {
+    alert('Your tweet is too long!');
+  } else if (charLength === 0) {
+    alert('Please enter a tweet before submitting');
+  } else {
   $.ajax({
     method: "POST", 
     url: "/tweets/", 
@@ -22,33 +34,8 @@
   }).then(function() {
       console.log('complete');
   })
+}
 };
-
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 
 const createTweetElement = function (tweet) {
   const dateObj = new Date(tweet.created_at * 1000);
