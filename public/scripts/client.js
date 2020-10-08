@@ -22,19 +22,31 @@ $(document).ready(function () {
   console.log('this is the form', $form);
   const charLength = $('#tweet-text').val().length;
   const data = $form.serialize();
-    if (charLength >= 140) {
-    alert('Your tweet is too long!');
-  } else if (charLength === 0) {
-    alert('Please enter a tweet before submitting');
+    if (charLength >= 140 || charLength === 0) {
+    // alert('Your tweet is too long!');
+    $(".error").slideDown();
+    $(".error").css('visibility', 'visible'); 
   } else {
   $.ajax({
     method: "POST", 
     url: "/tweets/", 
     data
   }).then(function() {
-      console.log('complete');
-  })
-}
+    $(".error").slideUp();
+      document.getElementById("tweet-form").reset();
+      $.ajax('/tweets/', {method: 'GET'})
+        .then(function (res, err) {
+          renderTweets([res[res.length-1]]);
+        });
+  });
+  }
+};
+/* <script>alert('uhoh');</script> */
+
+const escape = function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 const createTweetElement = function (tweet) {
@@ -49,7 +61,7 @@ const createTweetElement = function (tweet) {
     </div>
     <p class="handle">${tweet.user.handle}</p>
   </header>
-    <p class="tweets">${tweet.content.text}</p>
+  <p class="tweets">${escape(tweet.content.text)}</p>
   <footer class="footer">
     <p class="footer-tweet">${date}</p>
     <div>
