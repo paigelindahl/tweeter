@@ -1,3 +1,5 @@
+/* styling for tweet section */
+
 .tweets-parent {
   border: 3px solid black;
   padding: 10px;
@@ -6,7 +8,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
 }
 
 .tweet-header {
@@ -44,10 +45,6 @@
   overflow: auto;
 
 }
-
-/* p.tweets {
-  overflow: auto;
-} */
 
 .footer {
   display: flex;

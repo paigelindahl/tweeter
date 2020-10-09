@@ -9,6 +9,10 @@
   float: right;
 }
 
+#tweet-form > label {
+  margin-top: 10px;
+}
+
 .error {
   visibility: hidden;
 }
