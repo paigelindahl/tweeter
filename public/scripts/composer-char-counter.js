@@ -1,5 +1,7 @@
+// turns character counter red if over the 140 character limit
+
 $(document).ready(function() {
-  $('#tweet-text').keyup(function(evt){
+  $('#tweet-text').keyup(function(evt) {
     const $input = $(this);
     const form = $input.closest('form');
     const counter = form.find('.counter');
