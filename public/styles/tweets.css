@@ -28,6 +28,7 @@
 .tweet-header div {
   display: flex;
 }
+
 .tweets-parent:hover {
   box-shadow: 10px 10px 5px gray;
 }
@@ -40,8 +41,14 @@
   flex-basis: 100%;
   border-bottom: 3px solid black;
   padding-bottom: 20px;
+  overflow: auto;
 
 }
+
+/* p.tweets {
+  overflow: auto;
+} */
+
 .footer {
   display: flex;
   width: 100%;
@@ -51,3 +58,4 @@
 .footer-tweet {
   font-size: 15px;
 }  
+

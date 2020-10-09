@@ -10,10 +10,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -25,14 +21,30 @@ body {
    width: 90%;
    margin: auto;
  }
+
  p {
    margin: 12px 0;
  }
 
+ @media all and (min-width:1024px) {
+   #header-and-tweets {
+     display: flex;
+     justify-content: space-between;
+   }
+   
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+   #header-and-tweets > #header {
+    width: 33%;
+    height: 500px;
+    padding-top: 40px;
+    margin: 100px 40px 40px 40px;
+    
+  }
 
- /* font-family: 'Bungee', cursive;
-font-family: 'Source Sans Pro', sans-serif; */
+  .container {
+    margin-top: 30px;
+    width: 67%;
+    padding: 20px;
+  }
+ }
+

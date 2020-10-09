@@ -26,55 +26,37 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span id="logo-font">tweeter</span>
-      <div><strong>Write</strong> a new tweet</div>
+      <p id="logo-font">tweeter</p>
+      <p><strong>Write</strong> a new tweet</p>
     </nav>
-
-    <header id="header">
-      <div>
+    <div id="header-and-tweets">
+      <header id="header">
+        <div>
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <p class="error" style="visibility:hidden">Please enter a valid tweet</p>
-        <h2>Compose Tweet</h2>
-        <form id="tweet-form" action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button id="btn" type="submit" class="button">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="tweets-container">
-        <!-- <article class="tweets-parent">
-          <header class="tweet-header">
+        </div>
+        <br>
+        <div>
+          <h2>Paige</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <p class="error"> &#9888 Oops not a valid tweet. Please try again! &#9888</p>
+          <!-- <p class="error-empty">&#9888 Oops did you mean to send that? &#9888</p> -->
+          <form id="tweet-form" action="/tweets/" method="POST">
+            <label for="tweet-text"><strong>What are you humming about?</strong></label>
+            <textarea name="text" id="tweet-text"></textarea>
             <div>
-              <img src="https://i.imgur.com/73hZDYK.png"/>
-              <p class="name">Newton</p>
+              <button id="btn" type="submit" class="button">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
-            <p class="handle">@SirIsaac</p>
-          </header>
-            <p class="tweets">Testing if this works</p>
-        <footer class="footer">
-          <p class="footer-tweet">10 days ago</p>
-          <div>
-            <span>&#9873</span>
-            <span>&#8633</span>
-            <span>&#10084</span>
-          </div>
-        </footer>
-        </article> -->
-      </section>
-    </main>
+          </form>
+        </section>
+        <section class="tweets-container">
+        </section>
+      </main>
+    </div>  
   </body>
 </html>
 

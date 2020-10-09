@@ -8,6 +8,18 @@
   font-family: Bungee, sans-serif;
   float: right;
 }
+
+.error {
+  visibility: hidden;
+}
+
+.errorVisible {
+  visibility: visible;
+  border: 3px solid red;
+  color: red;
+  padding: 10px;
+}
+
 .red {
   color:red;
 }
@@ -17,6 +29,4 @@
   width: 100%;
   border: none; 
   border-bottom: 3px solid black;
-
-
  }

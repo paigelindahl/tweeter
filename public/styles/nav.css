@@ -8,7 +8,6 @@ nav {
   padding: 1.5em;
   justify-content: space-between;
   display: flex;
-  flex-direction: row;
   position: fixed;
   top: 0;
 }
@@ -17,4 +16,6 @@ nav {
   font-family: 'Bungee', sans-serif;
   font-size: larger;
 }
+
+
 

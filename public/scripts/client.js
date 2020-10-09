@@ -22,26 +22,28 @@ $(document).ready(function () {
   console.log('this is the form', $form);
   const charLength = $('#tweet-text').val().length;
   const data = $form.serialize();
-    if (charLength >= 140 || charLength === 0) {
-    // alert('Your tweet is too long!');
-    $(".error").slideDown();
-    $(".error").css('visibility', 'visible'); 
-  } else {
-  $.ajax({
-    method: "POST", 
-    url: "/tweets/", 
-    data
-  }).then(function() {
-    $(".error").slideUp();
+  const section = $form.closest('section');
+  const errorMsg= section.find('.error');
+    if (charLength > 140 || charLength === 0) {
+      errorMsg.addClass('errorVisible');
+      $(".error").slideDown();
+    } else {
+      $.ajax({
+      method: "POST", 
+      url: "/tweets/", 
+      data
+    }).then(function() {
+      $(".error").slideUp();
+      errorMsg.removeClass('errorVisible');
       document.getElementById("tweet-form").reset();
       $.ajax('/tweets/', {method: 'GET'})
         .then(function (res, err) {
           renderTweets([res[res.length-1]]);
+          $('.counter').html(140);
         });
-  });
+    });
   }
 };
-/* <script>alert('uhoh');</script> */
 
 const escape = function(str) {
   let div = document.createElement('div');
