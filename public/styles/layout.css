@@ -42,7 +42,8 @@ body {
   }
 
   .container {
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-right: 15px;
     width: 67%;
     padding: 20px;
   }
